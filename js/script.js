@@ -17,6 +17,7 @@ var app = new Vue({
             if (this.timer == null) {
                 this.reset();
                 this.timer = setInterval(this.countdown.bind(this), 1000);
+                this.panelShown = false;
             }
         },
         stop: function() {
