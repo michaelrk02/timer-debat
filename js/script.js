@@ -31,9 +31,8 @@ var app = new Vue({
             this.secondsLeft = AppData.actions[this.action].duration;
         },
         countdown: function() {
-            if (this.secondsLeft > 0) {
-                this.secondsLeft--;
-            } else {
+            var secs = --this.secondsLeft;
+            if (this.secondsLeft <= 0) {
                 this.stop();
             }
         }
