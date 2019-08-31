@@ -17,12 +17,12 @@
                     <div v-if="panelShown" class="w3-cell w3-cell-top w3-card-4 w3-white w3-animate-right" style="width: 300px">
                         <div class="w3-padding-large">
                             <div class="w3-section">
-                                <select v-bind:disabled="timer != null" v-on:change="action = event.target.value" class="w3-select">
+                                <select v-bind:disabled="timer != null" v-on:change="action = event.target.value" class="w3-select w3-border">
                                     <option v-for="(value, key) in actions" v-bind:value="key" v-bind:selected="key === action" v-if="key !== 'default'">{{ value.session }}: {{ value.description }}</option>
                                 </select>
                             </div>
                             <div class="w3-section">
-                                <select v-bind:disabled="timer != null" v-on:change="candidate = parseInt(event.target.value)" class="w3-select">
+                                <select v-bind:disabled="timer != null" v-on:change="candidate = parseInt(event.target.value)" class="w3-select w3-border">
                                     <option v-for="(value, i) in candidates" v-bind:value="i" v-bind:selected="i === candidate">{{ candidateNum(i) }}: {{ value.chairman }} - {{ value.viceChairman }}</option>
                                 </select>
                             </div>
