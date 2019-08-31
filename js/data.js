@@ -39,7 +39,7 @@ AppData.actions = {
         description: 'Penyampaian Visi & Misi',
         duration: 5 * 60
     },
-    anseringMotion: {
+    answeringMotion: {
         session: 'Debat',
         description: 'Jawaban Terhadap Mosi',
         duration: 3 * 60
