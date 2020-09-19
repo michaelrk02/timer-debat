@@ -72,6 +72,10 @@
                                 </div>
                                 <div class="w3-padding-large w3-center">
                                     <button class="w3-btn w3-theme-action" v-on:click="start()" v-bind:disabled="timer != null">Start</button>
+                                    <button class="w3-btn w3-theme-action" v-on:click="pause()" v-bind:disabled="timer == null">
+                                        <span v-if="!paused">Pause</span>
+                                        <span v-if="paused">Resume</span>
+                                    </button>
                                     <button class="w3-btn w3-theme-action" v-on:click="reset()" v-bind:disabled="timer == null">Reset</button>
                                 </div>
                             </div>

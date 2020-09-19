@@ -7,7 +7,8 @@ var app = new Vue({
         actions: AppData.actions,
         candidate: 0,
         action: AppData.actions.default,
-        secondsLeft: 0
+        secondsLeft: 0,
+        paused: false
     },
     mounted: function() {
         this.reset();
@@ -26,14 +27,19 @@ var app = new Vue({
                 this.timer = null;
             }
         },
+        pause: function() {
+            this.paused = !this.paused;
+        },
         reset: function() {
             this.stop();
             this.secondsLeft = AppData.actions[this.action].duration;
         },
         countdown: function() {
-            var secs = --this.secondsLeft;
-            if (this.secondsLeft <= 0) {
-                this.stop();
+            if (!this.paused) {
+                var secs = --this.secondsLeft;
+                if (this.secondsLeft <= 0) {
+                    this.stop();
+                }
             }
         }
     },
