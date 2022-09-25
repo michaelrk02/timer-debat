@@ -38,6 +38,7 @@ var app = new Vue({
             if (!this.paused) {
                 var secs = --this.secondsLeft;
                 if (this.secondsLeft <= 0) {
+                    document.getElementById('timeout-sound').play();
                     this.stop();
                 }
             }

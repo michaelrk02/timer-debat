@@ -34,6 +34,11 @@ AppData.candidates[candidateID(3)] = {
 //
 
 AppData.actions = {
+    test: {
+        session: 'Test',
+        description: 'Test',
+        duration: 5
+    },
     visionAndMission: {
         session: 'Orasi',
         description: 'Penyampaian Visi & Misi',
